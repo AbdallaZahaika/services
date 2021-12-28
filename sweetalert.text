@@ -1,0 +1,37 @@
+document: https://sweetalert.js.org/guides/
+
+CDN
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+Getting started
+
+swal("Hello world!");
+
+or
+
+swal({
+title: "Good job!",
+text: "You clicked the button!",
+icon: "success",
+button: "Aww yiss!",
+});
+
+or
+
+swal({
+title: "Are you sure?",
+text: "Once deleted, you will not be able to recover this imaginary file!",
+icon: "warning",
+buttons: true,
+dangerMode: true,
+})
+.then((willDelete) => {
+if (willDelete) {
+swal("Poof! Your imaginary file has been deleted!", {
+icon: "success",
+});
+} else {
+swal("Your imaginary file is safe!");
+}
+});
